@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* App.css */
+@font-face {
+  font-family: 'Friendly Fire';
+  src: local('Friendly Fire'), url(../public/fonts/Friendly_Fire.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Kenyan Coffee';
+  src: local('Kenyan Coffee'), url(../public/fonts/kenyan_coffee_rg.otf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Kenyan Coffee';
+  background-color: #2A1552;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-family: 'Friendly Fire';
+  font-size: 2em;
+  letter-spacing: .1em;
+  margin: auto;
+  max-width: 90rem;
+  text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000, 0.1em 0.1em 0 #000, 0 -0.1em 0 #000, 0.1em 0 0 #000, 0 0.1em 0 #000, -0.1em 0 0 #000;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  font-family: 'Friendly Fire';
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow:
+    -0.1em -0.1em 0 #000,
+    0.1em -0.1em 0 #000,
+    -0.1em 0.1em 0 #000,
+    0.1em 0.1em 0 #000,
+    0.0em -0.1em 0 #000,
+    0.1em 0.0em 0 #000,
+    0.0em 0.1em 0 #000,
+    -0.1em 0.0em 0 #000;
+  letter-spacing: 0.1em;
+  background-color: rgb(242, 175, 28);
+  border: solid rgb(200, 144, 21) 0;
+  border-bottom: solid rgb(200, 144, 21) 0.2em;
+  outline: solid black 0.1em;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem; /* Adjust the padding here */
+  user-select: none;
+  transition: border-color 0.1s, background-color 0.1s, color 0.1s, outline 0.1s;
+}
+
+button:hover {
+  border-color: transparent;
+  outline: solid white 0.1em;
+}
+
+button:active {
+  border-color: transparent;
+  background-color: white;
+}
+
+input[type="text"] {
+  background: none;
+  background-color: #160D2E;
+  border: .25rem solid #f0eeda;
+  border-radius: .75rem;
+  color: inherit;
+  font-family: 'Friendly Fire';
+  font-size: 2rem;
+  letter-spacing: .1em;
+  padding: .5rem;
+}
+
+.small-card-image {
+  width: 100px;
+  height: auto;
+  margin: 5px;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem 1rem ;
+  border: solid rgb(68, 51, 154) 0;
+  border-bottom: solid rgb(68, 51, 154) 0.2em;
+  outline: solid black 0.2em;
+  border-radius: 0.5rem;
+  background-color: rgb(84, 64, 187);
+}
+
+.menu > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
