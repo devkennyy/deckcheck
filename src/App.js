@@ -5,6 +5,7 @@ import DeckInput from './components/DeckInput';
 import DeckDisplay from './components/DeckDisplay';
 import DeckRating from './components/DeckRating';
 import DeckTips from './components/DeckTips';
+import RatingExplanation from './components/RatingExplanation';
 import ProblemsWarnings from './components/ProblemsWarnings';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <DeckDisplay deckData={deckData} />
         <DeckRating deckData={deckData} />
         <DeckTips deckData={deckData} />
+        <RatingExplanation />
         <ProblemsWarnings deckData={deckData} />
       </header>
     </div>
