@@ -22,8 +22,20 @@ body {
 }
 
 h2 {
+  padding: 10px;
   font-family: 'Friendly Fire';
   font-size: 2em;
+  letter-spacing: .1em;
+  margin: auto;
+  max-width: 90rem;
+  text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000, 0.1em 0.1em 0 #000, 0 -0.1em 0 #000, 0.1em 0 0 #000, 0 0.1em 0 #000, -0.1em 0 0 #000;
+  text-transform: uppercase;
+}
+
+p {
+  padding-top: 10px;
+  font-family: 'Friendly Fire';
+  font-size: 1.5em;
   letter-spacing: .1em;
   margin: auto;
   max-width: 90rem;
@@ -109,9 +121,10 @@ input[type="text"] {
 
 /* Style for the card container */
 .card {
+  gap: 10em;
   display: inline-flex;
   width: 150px;
-  margin: 10px;
+  margin: 6px;
   text-align: center;
 }
 
@@ -140,8 +153,12 @@ input[type="text"] {
 .level-icon {
   position: absolute; /* Set the position to absolute */
   top: 3px; /* Adjust the top position to place it at the top */
-  right: 65px; /* Adjust the right position to place it at the top-right corner */
-  max-width: 18px;
+  right: 63px; /* Adjust the right position to place it at the top-right corner */
+  max-width: 22px;
   height: auto;
   display: block;
+}
+
+.deck-images {
+  padding: 15px;
 }
