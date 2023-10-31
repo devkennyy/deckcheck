@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { allCards } from '../const';
-import Card from '../components/Card'
+import Card from '../components/Card';
+import '../App.css';
 
 const DeckInput = ({ onDeckInput }) => {
   const [deckLink, setDeckLink] = useState('');
   const [deckComposition, setDeckComposition] = useState([]);
   const [isLinkInputVisible, setLinkInputVisible] = useState(true);
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
     setDeckLink(e.target.value);
@@ -16,9 +17,33 @@ const DeckInput = ({ onDeckInput }) => {
     const query = deckLink.substring(deckLink.indexOf('?deck=') + 6);
     const cardNumbers = query.split('.').map(Number);
     const filteredCardNumbers = cardNumbers.filter((num) => !isNaN(num));
-
+  
+    // Check if the card count is above 25
     if (filteredCardNumbers.length > 25) {
-      setShowErrorMessage(true);
+      setErrorMessage("Invalid deck: More than 25 cards detected");
+      setDeckLink('');
+      return;
+    }
+
+    // Calculate the total cost of the deck
+    const totalCost = filteredCardNumbers.reduce((total, number) => {
+      const cardInfo = allCards.find((card) => card.id === number);
+      if (cardInfo) {
+        return total + cardInfo.cost;
+      }
+      return total;
+    }, 0);
+
+    // Check if the cost is above 50
+    if (totalCost > 50) {
+      setErrorMessage("Invalid deck: Cost is more than 50");
+      setDeckLink('');
+      return;
+    }
+
+    // Check if the card count is less than 25
+    if (filteredCardNumbers.length < 25) {
+      setErrorMessage("Invalid deck: Less than 25 cards detected");
       setDeckLink('');
       return;
     }
@@ -36,6 +61,7 @@ const DeckInput = ({ onDeckInput }) => {
 
     setDeckComposition(cardData);
     setLinkInputVisible(false);
+    setErrorMessage('');
 
     onDeckInput(cardData);
   };
@@ -62,9 +88,9 @@ const DeckInput = ({ onDeckInput }) => {
         </div>
       )}
 
-      {showErrorMessage && (
+      {errorMessage && (
         <div className="error-message">
-          <p>Invalid deck: More than 25 cards detected</p>
+          <p>{errorMessage}</p>
         </div>
       )}
     </div>
