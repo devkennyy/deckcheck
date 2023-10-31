@@ -10,6 +10,7 @@
 }
 
 body {
+  justify-content: center;
   font-family: 'Kenyan Coffee';
   background-color: #2A1552;
   font-family: Arial, sans-serif;
@@ -17,9 +18,6 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
@@ -55,7 +53,7 @@ button {
   border-bottom: solid rgb(200, 144, 21) 0.2em;
   outline: solid black 0.1em;
   border-radius: 0.75rem;
-  padding: 0.5rem 1rem; /* Adjust the padding here */
+  padding: 0.5rem 1rem; 
   user-select: none;
   transition: border-color 0.1s, background-color 0.1s, color 0.1s, outline 0.1s;
 }
@@ -90,12 +88,12 @@ input[type="text"] {
 
 .menu {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-
   padding: 0.5rem 1rem ;
+  margin-top: 18em;
   border: solid rgb(68, 51, 154) 0;
   border-bottom: solid rgb(68, 51, 154) 0.2em;
   outline: solid black 0.2em;
@@ -111,9 +109,8 @@ input[type="text"] {
 
 /* Style for the card container */
 .card {
-  position: relative; /* Set the position to relative */
-  display: inline-block;
-  width: 135px;
+  display: inline-flex;
+  width: 150px;
   margin: 10px;
   text-align: center;
 }
@@ -127,7 +124,6 @@ input[type="text"] {
 .card-image {
   max-width: 100%;
   height: auto;
-  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
@@ -136,7 +132,7 @@ input[type="text"] {
   position: absolute; /* Set the position to absolute */
   top: 1px; /* Adjust the top position to place it at the top */
   right: 1px; /* Adjust the right position to place it at the top-right corner */
-  max-width: 22px;
+  max-width: 25px;
   height: auto;
   display: block;
 }
@@ -144,9 +140,8 @@ input[type="text"] {
 .level-icon {
   position: absolute; /* Set the position to absolute */
   top: 3px; /* Adjust the top position to place it at the top */
-  right: 57px; /* Adjust the right position to place it at the top-right corner */
+  right: 65px; /* Adjust the right position to place it at the top-right corner */
   max-width: 18px;
   height: auto;
   display: block;
 }
-
