@@ -162,3 +162,16 @@ input[type="text"] {
 .deck-images {
   padding: 15px;
 }
+
+/* Define the CSS classes for different cost colors */
+.green-cost {
+  color: green;
+}
+
+.yellow-cost {
+  color: yellow;
+}
+
+.red-cost {
+  color: red;
+}
