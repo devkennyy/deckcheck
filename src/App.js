@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DeckInput from '../src/components/DeckInput'; // Import the DeckInput component
 import './App.css';
+import Card from './components/Card'
 
 function App() {
   const [deckComposition, setDeckComposition] = useState([]);
@@ -21,11 +22,8 @@ function App() {
           <h2>Deck Composition</h2>
           <div className="deck-images">
             {deckComposition.map((card, index) => (
-              <img
-                key={index}
-                src={card.image}
-                alt={`Card ${card.number}`}
-                className="small-card-image"
+              <Card
+                card={card}
               />
             ))}
           </div>
