@@ -1,37 +1,36 @@
 import React, { useState } from 'react';
+import DeckInput from '../src/components/DeckInput'; // Import the DeckInput component
 import './App.css';
 
-import DeckInput from './components/DeckInput';
-import DeckDisplay from './components/DeckDisplay';
-import DeckRating from './components/DeckRating';
-import DeckTips from './components/DeckTips';
-import RatingExplanation from './components/RatingExplanation';
-import ProblemsWarnings from './components/ProblemsWarnings';
-
 function App() {
-  // Define your state to manage deck data
-  const [deckData, setDeckData] = useState({
-    deckLink: '',
-    // Add more deck-related data as needed
-  });
+  const [deckComposition, setDeckComposition] = useState([]);
+  const [isLinkInputVisible, setLinkInputVisible] = useState(true);
 
-  // Function to handle deck input
-  const handleDeckInput = (deckLink) => {
-    // Implement logic to process the deck link and retrieve deck data
-    // Update deckData state with the retrieved data
+  // Function to handle the deck composition data
+  const handleDeckComposition = (deckData) => {
+    setDeckComposition(deckData);
+    setLinkInputVisible(false); // Hide the input after analyzing the link
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Deck Analyzer</h1>
-        <DeckInput onDeckInput={handleDeckInput} />
-        <DeckDisplay deckData={deckData} />
-        <DeckRating deckData={deckData} />
-        <DeckTips deckData={deckData} />
-        <RatingExplanation />
-        <ProblemsWarnings deckData={deckData} />
-      </header>
+    <div>
+      {isLinkInputVisible ? (
+        <DeckInput onDeckInput={handleDeckComposition} />
+      ) : (
+        <div>
+          <h2>Deck Composition</h2>
+          <div className="deck-images">
+            {deckComposition.map((card, index) => (
+              <img
+                key={index}
+                src={card.image}
+                alt={`Card ${card.number}`}
+                className="small-card-image"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
