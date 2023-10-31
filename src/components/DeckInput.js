@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { allCards } from '../const';
+import Card from '../components/Card'
 
 const DeckInput = ({ onDeckInput }) => {
   const [deckLink, setDeckLink] = useState('');
@@ -12,19 +13,13 @@ const DeckInput = ({ onDeckInput }) => {
   };
 
   const handleAnalyzeClick = () => {
-    // Extract the query part of the link, which starts after "?deck="
     const query = deckLink.substring(deckLink.indexOf('?deck=') + 6);
-
-    // Extract card numbers from the query
     const cardNumbers = query.split('.').map(Number);
-
-    // Filter out any NaN values
     const filteredCardNumbers = cardNumbers.filter((num) => !isNaN(num));
 
-    // Check if the number of cards is less than or equal to 25
     if (filteredCardNumbers.length > 25) {
       setShowErrorMessage(true);
-      setDeckLink(''); // Clear the input field
+      setDeckLink('');
       return;
     }
 
@@ -39,10 +34,8 @@ const DeckInput = ({ onDeckInput }) => {
       return null;
     }).filter((card) => card !== null);
 
-    console.log('Card Data:', cardData); // Log the card data
-
     setDeckComposition(cardData);
-    setLinkInputVisible(false); // Hide the input after analyzing the link
+    setLinkInputVisible(false);
 
     onDeckInput(cardData);
   };
@@ -63,13 +56,7 @@ const DeckInput = ({ onDeckInput }) => {
         <div className="deck-images">
           {deckComposition.map((card, index) => (
             <div key={index}>
-              <img
-                src={card.image}
-                alt={`Card ${card.number}`}
-                className="small-card-image"
-              />
-              <p>Cost: {card.cost}</p>
-              {console.log('Cost:', card.cost)}
+              <Card card={card} />
             </div>
           ))}
         </div>

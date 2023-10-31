@@ -108,3 +108,45 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
 }
+
+/* Style for the card container */
+.card {
+  position: relative; /* Set the position to relative */
+  display: inline-block;
+  width: 135px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Style for card content */
+.card-content {
+  position: relative; /* Set the position to relative */
+}
+
+/* Style for card image */
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for cost icon */
+.cost-icon {
+  position: absolute; /* Set the position to absolute */
+  top: 1px; /* Adjust the top position to place it at the top */
+  right: 1px; /* Adjust the right position to place it at the top-right corner */
+  max-width: 22px;
+  height: auto;
+  display: block;
+}
+
+.level-icon {
+  position: absolute; /* Set the position to absolute */
+  top: 3px; /* Adjust the top position to place it at the top */
+  right: 57px; /* Adjust the right position to place it at the top-right corner */
+  max-width: 18px;
+  height: auto;
+  display: block;
+}
+

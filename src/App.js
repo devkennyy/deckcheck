@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import DeckInput from '../src/components/DeckInput'; // Import the DeckInput component
+import DeckInput from './components/DeckInput';
 import './App.css';
-import Card from './components/Card'
+import Card from './components/Card';
 
 function App() {
   const [deckComposition, setDeckComposition] = useState([]);
   const [isLinkInputVisible, setLinkInputVisible] = useState(true);
 
-  // Function to handle the deck composition data
   const handleDeckComposition = (deckData) => {
     setDeckComposition(deckData);
-    setLinkInputVisible(false); // Hide the input after analyzing the link
+    setLinkInputVisible(false);
   };
 
   return (
@@ -22,9 +21,7 @@ function App() {
           <h2>Deck Composition</h2>
           <div className="deck-images">
             {deckComposition.map((card, index) => (
-              <Card
-                card={card}
-              />
+              <Card card={card} key={index} />
             ))}
           </div>
         </div>
