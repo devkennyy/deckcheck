@@ -24,7 +24,7 @@ body {
 h2 {
   padding: 15px;
   font-family: 'Friendly Fire';
-  font-size: 2em;
+  font-size: 2.5em;
   letter-spacing: .1em;
   margin: auto;
   max-width: 90rem;
@@ -36,7 +36,7 @@ p {
   padding-top: 10px;
   padding-left: 20px;
   font-family: 'Friendly Fire';
-  font-size: 1.5em;
+  font-size: 1.75em;
   letter-spacing: .1em;
   margin: auto;
   max-width: 90rem;
@@ -160,9 +160,10 @@ input[type="text"] {
   display: block;
 }
 
-.deck-images {
+.deck-images, .characterCard {
   padding: 15px;
 }
+
 
 /* Define the CSS classes for different cost colors */
 .green-cost {
@@ -180,3 +181,4 @@ input[type="text"] {
 .blue-cost {
   color: blue;
 }
+

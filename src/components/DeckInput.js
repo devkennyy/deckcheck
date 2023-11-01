@@ -36,6 +36,8 @@ const DeckInput = ({ onDeckInput }) => {
     });
 
     if (personalityCardInfo) {
+      // Set the correct image path for the personality card
+      personalityCardInfo.image = `/cards/Card_${String(personalityCardInfo.id).padStart(4, '0')}_bake.png`;
       setPersonalityCard(personalityCardInfo);
       console.log(`Personality Card Chosen: ${personalityCardInfo.name}`);
     } else {
@@ -93,7 +95,7 @@ const DeckInput = ({ onDeckInput }) => {
     setLinkInputVisible(false);
     setErrorMessage('');
 
-    onDeckInput(cardData);
+    onDeckInput({ deckData: cardData, personalityCard: personalityCardInfo });
   };
 
   return (
