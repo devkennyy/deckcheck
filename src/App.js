@@ -19,6 +19,57 @@ function App() {
     console.log(personalityCard); // Check if personalityCard is logged correctly
   }, [personalityCard]);
 
+  // Calculate character and map bonuses
+
+  // A TIER = 50
+  // B TIER = 40
+  // C TIER = 30
+  // D TIER = 20
+  // E TIER = 10
+
+  const characterStrengths = {
+    Classic: { attackBonus: 50, defenseBonus: 0 },
+    ThickCoat: { attackBonus: 0, defenseBonus: -30 },
+    PowerLegs: { attackBonus: 30, defenseBonus: 0 },
+    Runner: { attackBonus: 40, defenseBonus: 0 },
+    Badass: { attackBonus: 0, defenseBonus: 40 },
+    KatanaLover: { attackBonus: 10, defenseBonus: 0 },
+    Brasslover: { attackBonus: 10, defenseBonus: 0 },
+    DitherAndBanding: { attackBonus: 0, defenseBonus: 20 },
+    ReadingGlasses: { attackBonus: 50, defenseBonus: 0 },
+    ItsMedicinal: { attackBonus: 0, defenseBonus: 30 },
+    BigBullets: { attackBonus: 30, defenseBonus: 0 },
+  };
+
+  // const mapFactors = {
+  //   rooftop: { attackBonus: 0, defenseBonus: 0 },
+  //   subway: { attackBonus: 0, defenseBonus: 0 },
+  //   theatre: { attackBonus: 0, defenseBonus: 0 },
+  //   station: { attackBonus: 0, defenseBonus: 0 },
+  //   island: { attackBonus: 0, defenseBonus: 0 },
+  // };
+
+  // Get the character from the personalityCard
+  const characterPersonality = personalityCard && personalityCard.personality;
+
+  // // there is no maptype so hardcoding it for now
+  // const mapType = 'rooftop';
+
+  const characterBonus = characterStrengths[characterPersonality] || { attackBonus: 0, defenseBonus: 0 };
+
+    // Calculate the number of buff and debuff cards
+  const attackCardCount = deckComposition.filter(card => card.type === 'Buff').length;
+  const defenseCardCount = deckComposition.filter(card => card.type === 'Debuff').length;
+
+  // Calculate versatility score based on various factors
+  const versatilityScore = attackCardCount + defenseCardCount;
+
+  // Normalize the versatility score to a 1-10 scale
+  const maxVersatilityScore = 20; // The maximum versatility score
+  const versatilityRating = (versatilityScore / maxVersatilityScore) * 10;
+
+  console.log(versatilityRating)
+
   // Calculate the totals based on deckComposition for Attack and Defense
   const totalCardCount = 25;
   const maxRating = 10;
@@ -61,8 +112,6 @@ function App() {
   } else {
     synergyRating = 'Defense-Oriented';
   }
-
-  const versatilityRating = 0;
 
   return (
     <div>
