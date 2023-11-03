@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deck-check/static/css/main.6342dda9.css",
-    "main.js": "/deck-check/static/js/main.1bf337cc.js",
-    "static/media/kenyan_coffee_rg.otf": "/deck-check/static/media/kenyan_coffee_rg.f422e407e44f177b62ab.otf",
-    "static/media/Friendly_Fire.ttf": "/deck-check/static/media/Friendly_Fire.104d550b2ca14e67fcd5.ttf",
-    "index.html": "/deck-check/index.html",
-    "main.6342dda9.css.map": "/deck-check/static/css/main.6342dda9.css.map",
-    "main.1bf337cc.js.map": "/deck-check/static/js/main.1bf337cc.js.map"
+    "main.css": "/deckcheck/static/css/main.bb3bb86d.css",
+    "main.js": "/deckcheck/static/js/main.1bf337cc.js",
+    "static/media/kenyan_coffee_rg.otf": "/deckcheck/static/media/kenyan_coffee_rg.f422e407e44f177b62ab.otf",
+    "static/media/Friendly_Fire.ttf": "/deckcheck/static/media/Friendly_Fire.104d550b2ca14e67fcd5.ttf",
+    "index.html": "/deckcheck/index.html",
+    "main.bb3bb86d.css.map": "/deckcheck/static/css/main.bb3bb86d.css.map",
+    "main.1bf337cc.js.map": "/deckcheck/static/js/main.1bf337cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.6342dda9.css",
+    "static/css/main.bb3bb86d.css",
     "static/js/main.1bf337cc.js"
   ]
 }
