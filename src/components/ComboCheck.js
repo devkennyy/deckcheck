@@ -81,14 +81,14 @@ const ComboCheck = ({ deckData }) => {
         {deckCombos.length > 0 ? (
           <ul>
             {deckCombos.map((combo, index) => (
-              <li key={index}>
-                <div>
+              <div key={index}>
+                <div className="combo">
                   <Card card={allCards.find(card => card.name === combo.necessaryCards[0])} />
-                  <span> + </span>
+                  <span className="plus"> + </span>
                   <Card card={allCards.find(card => card.name === combo.necessaryCards[1])} />
                 </div>
                 <p>{combo.description}</p>
-              </li>
+              </div>
             ))}
           </ul>
         ) : (

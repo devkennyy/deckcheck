@@ -5,6 +5,7 @@ import CharacterSuggestion from './components/CharacterSuggestion';
 import ComboCheck from './components/ComboCheck';
 import './App.css';
 import Card from './components/Card';
+import DeckStats from './components/DeckStats';
 
 function App() {
   const [deckComposition, setDeckComposition] = useState([]);
@@ -119,6 +120,9 @@ function App() {
             {deckComposition.map((card, index) => (
               <Card card={card} key={index} />
             ))}
+          </div>
+          <div>
+            <DeckStats deckData={deckComposition} />
           </div>
           {personalityCard && (
             <div>
