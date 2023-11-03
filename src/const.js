@@ -10,13 +10,13 @@ export const defaultCardSort = (a, b) => (a.batch === b.batch ? a.id - b.id : a.
 // 5 = Wired Wrecks
 // 6 = Halloween Update (2023)
 
-const Card = (img, batch, type, name, cost) => ({
-  id: parseInt(img.substring(5, 9), 10),
+const Card = (image, batch, type, name, cost) => ({
+  id: parseInt(image.substring(5, 9), 10),
   batch,
   type,
   name,
   cost,
-  img,
+  image: `/cards/${image}`,
 });
 
 export const allCards = [

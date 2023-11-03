@@ -3,7 +3,6 @@ import Card from './Card';
 import { allCards } from '../const';
 
 const ComboCheck = ({ deckData }) => {
-  // Define the known card combos and their necessary cards
   const combos = [
     {
       comboName: "Heartless -> Nuke",
