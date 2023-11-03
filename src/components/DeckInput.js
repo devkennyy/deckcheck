@@ -15,6 +15,11 @@ const DeckInput = ({ onDeckInput }) => {
   };
 
   const handleAnalyzeClick = () => {
+    if (deckLink.trim() === '') {
+      setErrorMessage("Invalid Link: No link entered");
+      return;
+    }
+
     const query = deckLink.substring(deckLink.indexOf('?deck=') + 6);
     const cardNumbers = query.split('.').map(Number);
 
@@ -109,6 +114,7 @@ const DeckInput = ({ onDeckInput }) => {
             onChange={handleInputChange}
           />
           <button onClick={handleAnalyzeClick}>Analyze</button>
+          <p><a href="https://friendsvsfriends.help/">Don't have a link?</a></p> {/* Add the link subtext */}
         </div>
       ) : (
         <div className="deck-images">
