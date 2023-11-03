@@ -77,15 +77,18 @@ const ComboCheck = ({ deckData }) => {
   
     return (
       <div>
-        <h2>Combo Check</h2>
+        <h2>💥 Combo Check</h2>
         {deckCombos.length > 0 ? (
           <ul>
             {deckCombos.map((combo, index) => (
               <div key={index}>
                 <div className="combo">
-                  <Card card={allCards.find(card => card.name === combo.necessaryCards[0])} />
-                  <span className="plus"> + </span>
-                  <Card card={allCards.find(card => card.name === combo.necessaryCards[1])} />
+                  {combo.necessaryCards.map((cardName, cardIndex) => (
+                    <React.Fragment key={cardName}>
+                      {cardIndex > 0 && <span className="plus"> + </span>}
+                      <Card card={allCards.find(card => card.name === cardName)} />
+                    </React.Fragment>
+                  ))}
                 </div>
                 <p>{combo.description}</p>
               </div>
@@ -98,4 +101,4 @@ const ComboCheck = ({ deckData }) => {
     );
   };
   
-export default ComboCheck;
+  export default ComboCheck;

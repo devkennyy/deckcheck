@@ -27,7 +27,7 @@ const CharacterSuggestion = ({ deckData }) => {
 
   return (
     <div>
-      <h2>Character Suggestions</h2>
+      <h2>💡Character Suggestions</h2>
       {suggestions.length > 0 ? (
         <ul>
           {suggestions.map((suggestion, index) => (

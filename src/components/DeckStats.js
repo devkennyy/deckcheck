@@ -36,7 +36,7 @@ const DeckStats = ({ deckData }) => {
 
   return (
     <div className='deckStatistics'>
-      <h2>Deck Statistics</h2>
+      <h2>📊 Deck Statistics</h2>
       <p>Average Cost: {calculateAverageCost(deckData)}</p>
       <p>Highest Cost: {findHighestCost(deckData)}</p>
 

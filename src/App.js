@@ -6,6 +6,8 @@ import ComboCheck from './components/ComboCheck';
 import './App.css';
 import Card from './components/Card';
 import DeckStats from './components/DeckStats';
+import RatingExplanation from './components/RatingExplanation'; 
+import CollapsibleComponent from './components/CollapsibleComponent'; 
 
 function App() {
   const [deckComposition, setDeckComposition] = useState([]);
@@ -21,6 +23,14 @@ function App() {
   useEffect(() => {
     console.log(personalityCard); // Check if personalityCard is logged correctly
   }, [personalityCard]);
+
+  // Initialize the state for collapsible sections
+  const [isDeckRatingMinimized, setDeckRatingMinimized] = useState(false);
+  const [isCharacterSuggestionMinimized, setCharacterSuggestionMinimized] = useState(true);
+  const [isComboCheckMinimized, setComboCheckMinimized] = useState(true);
+  const [isDeckCompositionMinimized, setDeckCompositionMinimized] = useState(true);
+  const [isDeckStatsMinimized, setDeckStatsMinimized] = useState(true);
+  const [isRatingExplanationMinimized, setRatingExplanationMinimized] = useState(true);
 
   // Calculate character and map bonuses
   // A TIER = 50
@@ -106,25 +116,34 @@ function App() {
         <DeckInput onDeckInput={handleDeckComposition} />
       ) : (
         <div>
-          <DeckRating
-            totalCost={totalCost}
-            attackRating={attackRating}
-            defenseRating={defenseRating}
-            synergyRating={synergyRating}
-            versatilityRating={versatilityRating}
-          />
-          <CharacterSuggestion deckData={deckComposition} />
-          <ComboCheck deckData={deckComposition}/>
-          <h2>Deck Composition</h2>
-          <div className="deck-images">
-            {deckComposition.map((card, index) => (
-              <Card card={card} key={index} />
-            ))}
-          </div>
-          <div>
-            <DeckStats deckData={deckComposition} />
-          </div>
-          {personalityCard && (
+          {/* Wrap the components with CollapsibleComponent */}
+          <CollapsibleComponent title="Deck Rating">
+            <DeckRating
+              totalCost={totalCost}
+              attackRating={attackRating}
+              defenseRating={defenseRating}
+              synergyRating={synergyRating}
+              versatilityRating={versatilityRating}
+            />
+          </CollapsibleComponent>
+
+          <CollapsibleComponent title="Character Suggestion">
+            <CharacterSuggestion deckData={deckComposition} />
+          </CollapsibleComponent>
+
+          <CollapsibleComponent title="Combo Check">
+            <ComboCheck deckData={deckComposition} />
+          </CollapsibleComponent>
+
+          <CollapsibleComponent title="Deck Composition">
+            <h2>Deck Composition</h2>
+            <div className="deck-images">
+              {deckComposition.map((card, index) => (
+                <Card card={card} key={index} />
+              ))}
+            </div>
+
+            {personalityCard && (
             <div>
               <h2>Deck Primary Character</h2>
               <div className="characterCard">
@@ -132,6 +151,15 @@ function App() {
               </div>
             </div>
           )}
+          </CollapsibleComponent>
+
+          <CollapsibleComponent title="Deck Stats">
+            <DeckStats deckData={deckComposition} />
+          </CollapsibleComponent>
+
+          <CollapsibleComponent title="Rating Explanation">
+            <RatingExplanation />
+          </CollapsibleComponent>
         </div>
       )}
     </div>

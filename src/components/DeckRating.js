@@ -54,7 +54,7 @@ const DeckRating = ({ totalCost = 0, attackRating = 0, defenseRating = 0, synerg
 
   return (
     <div className="deck-rating">
-      <h2>Deck Rating</h2>
+      <h2>⭐ Deck Rating</h2>
       <p>Total Cost: <span className={colorClass}>{totalCost}</span></p>
 
       <div className="rating-header">
