@@ -3,7 +3,7 @@ import React from 'react';
 const RatingExplanation = () => {
   return (
     <div>
-      <h2>📜 Rating Explanation</h2>
+      <h2><span>📜</span> Rating Explanation</h2>
 
       <h3>Attack Rating</h3>
       <p>

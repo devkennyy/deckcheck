@@ -128,9 +128,9 @@ const ComboCheck = ({ deckData }) => {
   
     return (
       <div>
-        <h2>💥 Combo Check</h2>
+        <h2><span>💥</span> Combo Check</h2>
         {deckCombos.length > 0 ? (
-          <ul>
+          <div>
             {deckCombos.map((combo, index) => (
               <div key={index}>
                 <div className="combo">
@@ -144,7 +144,7 @@ const ComboCheck = ({ deckData }) => {
                 <p>{combo.description}</p>
               </div>
             ))}
-          </ul>
+          </div>
         ) : (
           <p>Your deck doesn't contain any of the known card combos.</p>
         )}

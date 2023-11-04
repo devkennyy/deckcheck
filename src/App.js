@@ -127,16 +127,12 @@ function App() {
             />
           </CollapsibleComponent>
 
-          <CollapsibleComponent title="Character Suggestion">
-            <CharacterSuggestion deckData={deckComposition} />
-          </CollapsibleComponent>
-
           <CollapsibleComponent title="Combo Check">
             <ComboCheck deckData={deckComposition} />
           </CollapsibleComponent>
 
           <CollapsibleComponent title="Deck Composition">
-            <h2>Deck Composition</h2>
+            <h2><span>🃏</span> Deck Composition</h2>
             <div className="deck-images">
               {deckComposition.map((card, index) => (
                 <Card card={card} key={index} />
@@ -155,6 +151,10 @@ function App() {
 
           <CollapsibleComponent title="Deck Stats">
             <DeckStats deckData={deckComposition} />
+          </CollapsibleComponent>
+          
+          <CollapsibleComponent title="Character Suggestion">
+            <CharacterSuggestion deckData={deckComposition} />
           </CollapsibleComponent>
 
           <CollapsibleComponent title="Rating Explanation">

@@ -67,7 +67,7 @@ button {
   border-radius: 0.75rem;
   padding: 0.5rem 1rem;
   user-select: none;
-  transition: border-color 0.1s, background-color 0.1s, color 0.1s, outline 0.1s;
+  transition: border-color 0.01s, background-color 0.01s, color 0.01s, outline 0.01s;
 }
 
 button:hover {
@@ -116,7 +116,7 @@ input[type='text'] {
 
 .link {
   text-decoration: none;
-  color: #2a1552 !important;
+  color: white !important;
   font-size: 1em !important;
   font-family: 'Friendly Fire';
 }
@@ -133,10 +133,17 @@ input[type='text'] {
   font-size: 2em;
 }
 
+span {
+  text-shadow: -0.075em -0.075em 0 #000, 0.075em -0.075em 0 #000, -0.075em 0.075em 0 #000,
+    0.075em 0.075em 0 #000, 0 -0.075em 0 #000, 0.075em 0 0 #000, 0 0.075em 0 #000,
+    -0.075em 0 0 #000;
+}
+
 .combo {
   display: flex;
   align-items: center;
   padding: 5px;
+  justify-content: center;
 }
 
 .card-content {
@@ -151,6 +158,9 @@ input[type='text'] {
 
 p {
   font-size: 1.75em;
+  text-shadow: -0.075em -0.075em 0 #000, 0.075em -0.075em 0 #000, -0.075em 0.075em 0 #000,
+  0.075em 0.075em 0 #000, 0 -0.075em 0 #000, 0.075em 0 0 #000, 0 0.075em 0 #000,
+  -0.075em 0 0 #000;
 }
 
 .cost-icon {
@@ -218,25 +228,5 @@ p {
   .menu {
     margin: 1em;
     text-wrap:wrap;
-  }
-
-  .card {
-    width: 100%; 
-    max-width: 300px; 
-    margin: 0; 
-  }
-
-  .cost-icon {
-    position: absolute; 
-    top: 1px;
-    right: 1px; 
-    max-width: 50px;
-  }
-
-  .level-icon {
-    position: absolute; 
-    top: 3px; 
-    right: 125px; 
-    max-width: 48px;
   }
 }
