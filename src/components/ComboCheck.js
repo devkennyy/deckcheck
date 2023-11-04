@@ -54,6 +54,16 @@ const ComboCheck = ({ deckData }) => {
       necessaryCards: ["Health Down", "Poison"],
       description: "Deals 63 damage on demand. Use 'Health Down' to locate opponents and 'Poison' for information."
     },
+    {
+      comboName: "Bigger Explosions -> Sticky Bomb",
+      necessaryCards: ["Bigger Explosions", "Sticky Bomb"],
+      description: "A simple combo that makes the sticky bomb even more lethal."
+    },
+    {
+      comboName: "Bigger Explosions -> Land Mine",
+      necessaryCards: ["Bigger Explosions", "Land Mine"],
+      description: "A simple combo that makes the land mine even more lethal."
+    }
   ];
 
   console.log(deckData)
