@@ -8,6 +8,8 @@ Uses FvF deck builder export links to read deck data and display insights
 - Card synergies
 - Deck insights
 
+Heavily inspired by [KarlTheCool Deck Builder](https://github.com/KarlTheCool/fvf-decks)
+
 ## Contribute
 ### `npm start`
 
