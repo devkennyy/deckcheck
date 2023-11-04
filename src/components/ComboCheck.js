@@ -30,9 +30,19 @@ const ComboCheck = ({ deckData }) => {
       description: "The wall hacks combo. Effective on long-range maps. DJ Newton can enhance accuracy for better results."
     },
     {
+      comboName: "Predator Vision -> Phantom Bullets -> Albatross 21",
+      necessaryCards: ["Predator Vision", "Phantom Bullets", "Albatross 21"],
+      description: "The wall hacks combo with even more power. Effective on long range maps."
+    },
+    {
       comboName: "Barbed Cards -> Garbage Day -> Invisible Hand -> Hot Potato!",
       necessaryCards: ["Barbed Cards", "Garbage Day", "Invisible Hand", "Hot Potato"],
       description: "An evil combo best used while camping near your spawn if you're fortunate enough to get all four cards."
+    },
+    {
+      comboName: "Barbed Cards -> Hot Potato",
+      necessaryCards: ["Barbed Cards", "Hot Potato"],
+      description: "Make your opponent take large amounts of damage or risk explosion, more effective during a fight."
     },
     {
       comboName: "Bullet Time -> Mind Blowing",
@@ -63,7 +73,38 @@ const ComboCheck = ({ deckData }) => {
       comboName: "Bigger Explosions -> Land Mine",
       necessaryCards: ["Bigger Explosions", "Land Mine"],
       description: "A simple combo that makes the land mine even more lethal."
+    },
+    {
+      comboName: "Katana -> Swap Weapons",
+      necessaryCards: ["Katana", "Swap Weapons"],
+      description: "Give your opponent the most difficult weapon to execute and cook them."
+    },
+    {
+      comboName: "Boomstick -> Akimbo",
+      necessaryCards: ["Boomstick", "Akimbo"],
+      description: "A powerful combo that turns the Boomstick into a one shot machine."
+    },
+    {
+      comboName: "Ninja Log -> Boomstick",
+      necessaryCards: ["Ninja Log", "Boomstick"],
+      description: "Close space with the ninja log and take the advantage in a close range fight."
+    },
+    {
+      comboName: "Ninja Smoke -> Boomstick",
+      necessaryCards: ["Ninja Smoke", "Boomstick"],
+      description: "Close space with the ninja smoke and take the advantage in a close range fight."
+    },
+    {
+      comboName: "Heartless -> Wall",
+      necessaryCards: ["Heartless", "Wall"],
+      description: "Hide your heart in the wall and watch the enemies panic."
+    },
+    {
+      comboName: "Heartless -> Bouncy Wall",
+      necessaryCards: ["Heartless", "Bouncy Wall"],
+      description: "Hide your heart in the wall and watch the enemies panic."
     }
+
   ];
 
   console.log(deckData)
