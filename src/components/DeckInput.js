@@ -114,7 +114,7 @@ const DeckInput = ({ onDeckInput }) => {
             onChange={handleInputChange}
           />
           <button onClick={handleAnalyzeClick}>Analyze</button>
-          <p><a href="https://friendsvsfriends.help/">Don't have a link?</a></p> {/* Add the link subtext */}
+          <p><a className='link' href="https://friendsvsfriends.help/">Don't have a link?</a></p>
         </div>
       ) : (
         <div className="deck-images">

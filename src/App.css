@@ -10,76 +10,60 @@
 }
 
 body {
-  justify-content: center;
-  font-family: 'Kenyan Coffee';
+  font-family: 'Kenyan Coffee', Arial, sans-serif;
   background-color: #2a1552;
-  font-family: Arial, sans-serif;
   color: white;
   margin: 0;
   padding: 0;
   display: flex;
-  height: 100vh;
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100vh;
+  text-align: center; 
+}
+
+h2, h3, p {
+  user-select: none;
+  font-family: 'Friendly Fire';
+  letter-spacing: 0.07em;
+  max-width: 90rem;
+  text-transform: uppercase;
+  text-align: center; 
 }
 
 h2 {
-  padding: 10px;
-  font-family: 'Friendly Fire';
   font-size: 2.7em;
-  letter-spacing: 0.1em;
-  margin: auto;
-  max-width: 90rem;
+  padding: 10px;
   text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000,
     0.1em 0.1em 0 #000, 0 -0.1em 0 #000, 0.1em 0 0 #000, 0 0.1em 0 #000,
     -0.1em 0 0 #000;
-  text-transform: uppercase;
 }
 
 h3 {
-  padding: 15px;
-  font-family: 'Friendly Fire';
   font-size: 2.25em;
-  letter-spacing: 0.1em;
-  margin: auto;
-  max-width: 90rem;
+  padding: 15px;
   text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000,
     0.1em 0.1em 0 #000, 0 -0.1em 0 #000, 0.1em 0 0 #000, 0 0.1em 0 #000,
     -0.1em 0 0 #000;
-  text-transform: uppercase;
 }
 
 .page {
-  align-items: center;
-  justify-content: left;
-}
-
-p {
-  font-family: 'Friendly Fire';
-  padding-left: 25px;
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
-  margin: 10px;
-  max-width: 90rem;
-  text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000,
-    0.1em 0.1em 0 #000, 0 -0.1em 0 #000, 0.1em 0 0 #000, 0 0.1em 0 #000,
-    -0.1em 0 0 #000;
-  text-transform: uppercase;
+  justify-content: center;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
 }
 
 button {
-  background: none;
-  color: inherit;
-  border: none;
+  cursor: pointer;
   font-family: 'Friendly Fire';
   font-size: 2rem;
   text-transform: uppercase;
-  text-shadow: -0.1em -0.1em 0 #000, 0.1em -0.1em 0 #000, -0.1em 0.1em 0 #000,
-    0.1em 0.1em 0 #000, 0em -0.1em 0 #000, 0.1em 0em 0 #000, 0em 0.1em 0 #000,
-    -0.1em 0em 0 #000;
   letter-spacing: 0.1em;
   background-color: rgb(242, 175, 28);
-  border: solid rgb(200, 144, 21) 0;
-  border-bottom: solid rgb(200, 144, 21) 0.2em;
-  outline: solid black 0.1em;
+  border: none;
   border-radius: 0.75rem;
   padding: 0.5rem 1rem;
   user-select: none;
@@ -108,23 +92,15 @@ input[type='text'] {
   padding: 0.5rem;
 }
 
-.small-card-image {
-  width: 100px;
-  height: auto;
-  margin: 5px;
-}
-
-.deckStatistics > p {
-  font-size: 2rem
-}
-
 .menu {
+  margin-top: 10em !important;
   display: flex;
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 1rem;
   align-items: center;
   padding: 0.5rem 1rem;
-  margin-top: 18em;
+  margin-top: 1em; 
   border: solid rgb(68, 51, 154) 0;
   border-bottom: solid rgb(68, 51, 154) 0.2em;
   outline: solid black 0.2em;
@@ -133,14 +109,20 @@ input[type='text'] {
 }
 
 .menu > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1; 
+  text-align: center; 
+  margin: 0.5rem; 
 }
 
-/* Style for the card container */
+.link {
+  text-decoration: none;
+  color: #2a1552 !important;
+  font-size: 1em !important;
+  font-family: 'Friendly Fire';
+}
+
 .card {
-  gap: 10em;
+  gap: 1em; 
   display: inline-flex;
   width: 150px;
   margin: 6px;
@@ -157,32 +139,33 @@ input[type='text'] {
   padding: 5px;
 }
 
-/* Style for card content */
 .card-content {
-  position: relative; /* Set the position to relative */
+  position: relative; 
 }
 
-/* Style for card image */
 .card-image {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-/* Style for cost icon */
+p {
+  font-size: 1.75em;
+}
+
 .cost-icon {
-  position: absolute; /* Set the position to absolute */
-  top: 1px; /* Adjust the top position to place it at the top */
-  right: 1px; /* Adjust the right position to place it at the top-right corner */
+  position: absolute; 
+  top: 1px;
+  right: 1px; 
   max-width: 25px;
   height: auto;
   display: block;
 }
 
 .level-icon {
-  position: absolute; /* Set the position to absolute */
-  top: 3px; /* Adjust the top position to place it at the top */
-  right: 63px; /* Adjust the right position to place it at the top-right corner */
+  position: absolute; 
+  top: 3px; 
+  right: 63px; 
   max-width: 22px;
   height: auto;
   display: block;
@@ -193,7 +176,6 @@ input[type='text'] {
   padding: 15px;
 }
 
-/* Define the CSS classes for different cost colors */
 .green-cost {
   color: green;
 }
@@ -210,7 +192,51 @@ input[type='text'] {
   color: blue;
 }
 
-/* Style for the plus icon */
 .plus {
-  font-size: 2rem; /* Increase the font size of the plus icon */
+  font-size: 2rem; 
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2em; 
+    padding: 5px; 
+  }
+
+  h3 {
+    font-size: 1.8em; 
+    padding: 10px; 
+  }
+
+  p {
+    font-size: 1.75em; 
+  }
+
+  button {
+    font-size: 1.5rem; 
+  }
+
+  .menu {
+    margin-top: 1em; 
+    text-wrap:wrap;
+  }
+
+  .card {
+    width: 100%; 
+    max-width: 300px; 
+    margin: 0; 
+  }
+
+  .cost-icon {
+    position: absolute; 
+    top: 1px;
+    right: 1px; 
+    max-width: 50px;
+  }
+
+  .level-icon {
+    position: absolute; 
+    top: 3px; 
+    right: 125px; 
+    max-width: 48px;
+  }
 }
