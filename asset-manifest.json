@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/deckcheck/static/css/main.bb3bb86d.css",
-    "main.js": "/deckcheck/static/js/main.1bf337cc.js",
-    "static/media/kenyan_coffee_rg.otf": "/deckcheck/static/media/kenyan_coffee_rg.f422e407e44f177b62ab.otf",
-    "static/media/Friendly_Fire.ttf": "/deckcheck/static/media/Friendly_Fire.104d550b2ca14e67fcd5.ttf",
-    "index.html": "/deckcheck/index.html",
-    "main.bb3bb86d.css.map": "/deckcheck/static/css/main.bb3bb86d.css.map",
-    "main.1bf337cc.js.map": "/deckcheck/static/js/main.1bf337cc.js.map"
+    "main.css": "/static/css/main.5700227d.css",
+    "main.js": "/static/js/main.1bf337cc.js",
+    "static/media/kenyan_coffee_rg.otf": "/static/media/kenyan_coffee_rg.f422e407e44f177b62ab.otf",
+    "static/media/Friendly_Fire.ttf": "/static/media/Friendly_Fire.104d550b2ca14e67fcd5.ttf",
+    "index.html": "/index.html",
+    "main.5700227d.css.map": "/static/css/main.5700227d.css.map",
+    "main.1bf337cc.js.map": "/static/js/main.1bf337cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb3bb86d.css",
+    "static/css/main.5700227d.css",
     "static/js/main.1bf337cc.js"
   ]
 }
