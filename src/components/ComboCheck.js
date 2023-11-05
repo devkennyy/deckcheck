@@ -119,6 +119,21 @@ const ComboCheck = ({ deckData }) => {
       comboName: "Slow Reload -> Small Mag",
       necessaryCards: ["Slow Reload", "Small Mag"],
       description: "Make the enemies weapon weaker and play for shot trades."
+    },
+    {
+      comboName: "Big Head -> Mind Blowing",
+      necessaryCards: ["Big Head", "Mind Blowing"],
+      description: "Make your opponent's brain bigger and get the kill even easier."
+    },
+    {
+      comboName: "Pyromania -> Karrotov",
+      necessaryCards: ["Pyromania", "Karrotov"],
+      description: "Apply Pyromania at the start of the round and use the Karrotov as a Medkit."
+    },
+    {
+      comboName: "Tin Man -> Energy Drink",
+      necessaryCards: ["Tin Man", "Energy Drink"],
+      description: "Counter the only downside of the Tin Man with increased speed."
     }
   ];
 
