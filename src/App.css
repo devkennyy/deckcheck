@@ -29,6 +29,11 @@ h2, h3, p {
   max-width: 90rem;
   text-transform: uppercase;
   text-align: center; 
+  text-wrap: wrap;
+}
+
+p {
+  margin: 0.5em;
 }
 
 h2 {
@@ -165,8 +170,8 @@ p {
 
 .cost-icon {
   position: absolute; 
-  top: 1px;
-  right: 1px; 
+  top: 0px;
+  right: 0px; 
   max-width: 25px;
   height: auto;
   display: block;
@@ -204,6 +209,10 @@ p {
 
 .plus {
   font-size: 2rem; 
+}
+
+.potentialComboDesc {
+  font-size: 1.5rem; 
 }
 
 @media (max-width: 768px) {

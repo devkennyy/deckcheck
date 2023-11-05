@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import '../App.css';
 import { allCards } from '../const';
 
 const ComboCheck = ({ deckData }) => {
@@ -103,53 +104,97 @@ const ComboCheck = ({ deckData }) => {
       comboName: "Heartless -> Bouncy Wall",
       necessaryCards: ["Heartless", "Bouncy Wall"],
       description: "Hide your heart in the wall and watch the enemies panic."
+    },
+    {
+      comboName: "Smoke Bomb -> Predator Vision",
+      necessaryCards: ["Smoke Bomb", "Predator Vision"],
+      description: "A harder to execute wall hack, smoke yourself and apply the vision buff."
     }
 
   ];
 
-  console.log(deckData)
+  const hasCombo = (deck, combo) => {
+    if (Array.isArray(deck)) {
+      const necessaryCards = combo.necessaryCards;
+      return necessaryCards.every(cardName => deck.some(card => card.name === cardName));
+    }
+    return false;
+  };
 
-    // Function to check if the user's deck contains a specific combo
-    const hasCombo = (deck, combo) => {
-      if (Array.isArray(deck)) {
-        const necessaryCards = combo.necessaryCards;
-  
-        return necessaryCards.every(cardName => deck.some(card => card.name === cardName));
-      }
-      return false;
-    };
-  
-    const deckCombos = [];
+  const findPotentialCombos = (deck, combos) => {
+    const potentialCombos = [];
+
     for (const combo of combos) {
-      if (hasCombo(deckData, combo)) {
-        deckCombos.push(combo);
+      if (!hasCombo(deck, combo)) {
+        const necessaryCards = combo.necessaryCards;
+        const missingCards = necessaryCards.filter(cardName => !deck.some(card => card.name === cardName));
+
+        if (missingCards.length === 1) {
+          potentialCombos.push({
+            comboName: combo.comboName,
+            necessaryCards: missingCards,
+            description: <p className="potentialComboDesc">Potential combo: <span className="red-cost">{missingCards[0]}</span> + {necessaryCards.filter(card => card !== missingCards[0]).join(" + ")}</p>,
+          });
+        }
       }
     }
-  
-    return (
-      <div>
-        <h2><span>💥</span> Combo Check</h2>
-        {deckCombos.length > 0 ? (
-          <div>
-            {deckCombos.map((combo, index) => (
-              <div key={index}>
-                <div className="combo">
-                  {combo.necessaryCards.map((cardName, cardIndex) => (
-                    <React.Fragment key={cardName}>
-                      {cardIndex > 0 && <span className="plus"> + </span>}
-                      <Card card={allCards.find(card => card.name === cardName)} />
-                    </React.Fragment>
-                  ))}
-                </div>
-                <p>{combo.description}</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p>Your deck doesn't contain any of the known card combos.</p>
-        )}
-      </div>
-    );
+
+    
+
+    return potentialCombos;
   };
-  
-  export default ComboCheck;
+
+  const deckCombos = [];
+  const potentialCombos = findPotentialCombos(deckData, combos);
+
+  for (const combo of combos) {
+    if (hasCombo(deckData, combo)) {
+      deckCombos.push(combo);
+    }
+  }
+
+  return (
+    <div>
+      <h2><span>💥</span> Combo Check</h2>
+      {deckCombos.length > 0 ? (
+        <div>
+          {deckCombos.map((combo, index) => (
+            <div key={index}>
+              <div className="combo">
+                {combo.necessaryCards.map((cardName, cardIndex) => (
+                  <React.Fragment key={cardName}>
+                    {cardIndex > 0 && <span className="plus"> + </span>}
+                    <Card card={allCards.find(card => card.name === cardName)} />
+                  </React.Fragment>
+                ))}
+              </div>
+              <p>{combo.description}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Your deck doesn't contain any of the known card combos.</p>
+      )}
+      {potentialCombos.length > 0 && (
+        <div>
+          <h3>Potential Combos</h3>
+          {potentialCombos.map((combo, index) => (
+            <div key={index}>
+              <div className="combo">
+                {combo.necessaryCards.map((cardName, cardIndex) => (
+                  <React.Fragment key={cardName}>
+                    {cardIndex > 0 && <span className="plus"> + </span>}
+                    <Card card={allCards.find(card => card.name === cardName)} />
+                  </React.Fragment>
+                ))}
+              </div>
+              <p>{combo.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ComboCheck;
