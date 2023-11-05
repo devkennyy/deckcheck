@@ -171,7 +171,7 @@ p {
 .cost-icon {
   position: absolute; 
   top: 0px;
-  right: 0px; 
+  right: 1px; 
   max-width: 25px;
   height: auto;
   display: block;
@@ -179,9 +179,9 @@ p {
 
 .level-icon {
   position: absolute; 
-  top: 3px; 
+  top: 2px; 
   right: 63px; 
-  max-width: 22px;
+  max-width: 23px;
   height: auto;
   display: block;
 }

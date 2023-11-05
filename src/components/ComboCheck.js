@@ -8,7 +8,7 @@ const ComboCheck = ({ deckData }) => {
     {
       comboName: "Heartless -> Nuke",
       necessaryCards: ["Heartless", "Nuke"],
-      description: "Deadly combo that makes you invincible. Best used with Haru for chasing down enemies in the nuked area."
+      description: "Deadly combo that makes you invincible, but don't waste any time in the nuked area."
     },
     {
       comboName: "Ninja Log -> Self-Destruct Device",
@@ -109,8 +109,12 @@ const ComboCheck = ({ deckData }) => {
       comboName: "Smoke Bomb -> Predator Vision",
       necessaryCards: ["Smoke Bomb", "Predator Vision"],
       description: "A harder to execute wall hack, smoke yourself and apply the vision buff."
+    },
+    {
+      comboName: "Teleport Bomb -> Self Destruct Device",
+      necessaryCards: ["Teleport Bomb", "Self-destruct Device"],
+      description: "A surefire kill combo, even if it costs your life. Great for tracking camping opponents in 2v2 matches."
     }
-
   ];
 
   const hasCombo = (deck, combo) => {
