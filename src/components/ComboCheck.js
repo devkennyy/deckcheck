@@ -113,7 +113,12 @@ const ComboCheck = ({ deckData }) => {
     {
       comboName: "Teleport Bomb -> Self Destruct Device",
       necessaryCards: ["Teleport Bomb", "Self-destruct Device"],
-      description: "A surefire kill combo, even if it costs your life. Great for tracking camping opponents in 2v2 matches."
+      description: "Teleport right to your enemy's toes and just explode."
+    },
+    {
+      comboName: "Slow Reload -> Small Mag",
+      necessaryCards: ["Slow Reload", "Small Mag"],
+      description: "Make the enemies weapon weaker and play for shot trades."
     }
   ];
 
