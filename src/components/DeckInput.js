@@ -119,9 +119,11 @@ const DeckInput = ({ onDeckInput }) => {
       ) : (
         <div className="deck-images">
           {deckComposition.map((card, index) => (
-            <div key={index}>
-              <Card card={card} />
-            </div>
+            card && (
+              <div key={index}>
+                <Card card={card} />
+              </div>
+            )
           ))}
         </div>
       )}
