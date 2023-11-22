@@ -62,15 +62,15 @@ h3 {
 }
 
 button {
+  margin: 2rem;
   cursor: pointer;
   font-family: 'Friendly Fire';
   font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   background-color: rgb(242, 175, 28);
   border: none;
   border-radius: 0.75rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   user-select: none;
   transition: border-color 0.01s, background-color 0.01s, color 0.01s, outline 0.01s;
 }
