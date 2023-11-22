@@ -134,6 +134,16 @@ const ComboCheck = ({ deckData }) => {
       comboName: "Tin Man -> Energy Drink",
       necessaryCards: ["Tin Man", "Energy Drink"],
       description: "Counter the only downside of the Tin Man with increased speed."
+    },
+    {
+      comboName: "Lottery Ticket -> Bomb Lover",
+      necessaryCards: ["Lottery Ticket", "Bomb Lover"],
+      description: "Get more cards and even more bombs."
+    },
+    {
+      comboName: "Heartless -> Berserk",
+      necessaryCards: ["Heartless", "Berserk"],
+      description: "Become an even stronger tank than before with higher damage output."
     }
   ];
 
