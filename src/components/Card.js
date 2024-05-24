@@ -1,7 +1,18 @@
 import React from 'react';
 
 const Card = ({ card }) => {
+  if (!card || typeof card !== 'object') {
+    console.error("Invalid card data:", card);
+    return null; 
+  }
+
   const { name, cost, image } = card;
+
+  if (!name || !cost || !image) {
+    console.error("Invalid card properties:", card);
+    return null; 
+  }
+
   const costIconPath = `/cost/card_cost_icon_${cost}.png`;
   const levelPath = '/level/card_lvl_max.png';
 

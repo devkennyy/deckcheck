@@ -113,7 +113,37 @@ const ComboCheck = ({ deckData }) => {
     {
       comboName: "Teleport Bomb -> Self Destruct Device",
       necessaryCards: ["Teleport Bomb", "Self-destruct Device"],
-      description: "A surefire kill combo, even if it costs your life. Great for tracking camping opponents in 2v2 matches."
+      description: "Teleport right to your enemy's toes and just explode."
+    },
+    {
+      comboName: "Slow Reload -> Small Mag",
+      necessaryCards: ["Slow Reload", "Small Mag"],
+      description: "Make the enemies weapon weaker and play for shot trades."
+    },
+    {
+      comboName: "Big Head -> Mind Blowing",
+      necessaryCards: ["Big Head", "Mind Blowing"],
+      description: "Make your opponent's brain bigger and get the kill even easier."
+    },
+    {
+      comboName: "Pyromania -> Karrotov",
+      necessaryCards: ["Pyromania", "Karrotov"],
+      description: "Apply Pyromania at the start of the round and use the Karrotov as a Medkit."
+    },
+    {
+      comboName: "Tin Man -> Energy Drink",
+      necessaryCards: ["Tin Man", "Energy Drink"],
+      description: "Counter the only downside of the Tin Man with increased speed."
+    },
+    {
+      comboName: "Lottery Ticket -> Bomb Lover",
+      necessaryCards: ["Lottery Ticket", "Bomb Lover"],
+      description: "Get more cards and even more bombs."
+    },
+    {
+      comboName: "Heartless -> Berserk",
+      necessaryCards: ["Heartless", "Berserk"],
+      description: "Become an even stronger tank than before with higher damage output."
     }
   ];
 
