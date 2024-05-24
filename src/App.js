@@ -160,6 +160,8 @@ function App() {
           <CollapsibleComponent title="Rating Explanation">
             <RatingExplanation />
           </CollapsibleComponent>
+
+          <button onClick={() => setLinkInputVisible(true)}>Click here to view another deck</button>
         </div>
       )}
     </div>
